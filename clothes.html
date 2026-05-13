@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luxury Clothing – Top Of The Line Fashions</title>
-  <meta name="description" content="Browse our collection of AAA-quality luxury replica clothing, tracksuits, and apparel. Premium fabrics at factory direct pricing.">
+  <meta name="description" content="Browse our collection of AAA-quality luxury replica clothing, tracksuits, shirts, and apparel.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,7 +84,7 @@
     <p class="text-blush tracking-[0.3em] uppercase text-sm mb-3">Collection</p>
     <h1 class="text-4xl sm:text-5xl font-display font-bold text-cream">Luxury Clothing</h1>
     <div class="w-16 h-px bg-rosegold mx-auto mt-4"></div>
-    <p class="text-cream/50 mt-4 max-w-xl mx-auto">AAA factory direct replica apparel, tracksuits & knit sets. Premium fabrics, exact detailing.</p>
+    <p class="text-cream/50 mt-4 max-w-xl mx-auto">AAA factory direct replica apparel, tracksuits, shirts & combos. Premium fabrics, exact detailing.</p>
   </div>
 </section>
 
@@ -101,10 +101,7 @@
       <button onclick="closeModal()" class="text-cream/40 hover:text-cream text-2xl">&times;</button>
     </div>
     <form id="inquiryForm">
-      <div class="mb-4">
-        <label>Product</label>
-        <input type="text" id="modalProduct" readonly class="opacity-70">
-      </div>
+      <div class="mb-4"><label>Product</label><input type="text" id="modalProduct" readonly class="opacity-70"></div>
       <div class="grid grid-cols-2 gap-4 mb-4">
         <div><label>First Name</label><input type="text" id="firstName" required placeholder="John"></div>
         <div><label>Last Name</label><input type="text" id="lastName" required placeholder="Doe"></div>
@@ -137,17 +134,27 @@
 
 <script>
   const clothes = [
-    { img: '13ab361b-0479-4787-8ab9-c2e1ae57647e.JPG', title: 'Classic Tracksuit', desc: 'Premium logo tracksuit, AAA replica quality.', price: 169.99 },
-    { img: '5167e575-7f63-4a03-9799-ae32def6127d.JPG', title: 'Zip-Up Hoodie Set', desc: 'Full zip hoodie and jogger set, comfortable fit.', price: 169.99 },
-    { img: '58bef246-2a21-42a3-a013-f58cf06a2c0a.JPG', title: 'Signature Knit Set', desc: 'Matching knit top and bottom, soft fabric.', price: 169.99 },
-    { img: '81ad7125-d4d3-41e9-8450-b4b6cb5bfab7.JPG', title: 'Velour Tracksuit', desc: 'Luxury velour tracksuit, premium detailing.', price: 169.99 },
-    { img: 'ab05f976-d022-4a3b-9c0a-83f5c6f33fd2.JPG', title: 'Jersey Shorts Set', desc: 'Sporty jersey set, breathable fabric.', price: 169.99 },
-    { img: 'acd2af7e-3bfd-491d-bf03-8e734358f5a0.JPG', title: 'Puffer Jacket Set', desc: 'Warm puffer jacket with matching pants.', price: 169.99 },
-    { img: 'b0effa8c-b8b6-43d9-8c76-3c4e8b4c54b7.JPG', title: 'Tech Fleece Set', desc: 'Modern tech fleece tracksuit, sleek design.', price: 169.99 },
-    { img: 'f36f0465-aeca-4592-9a41-9f26ae759b15.JPG', title: 'Summer Knit Set', desc: 'Lightweight knit set, perfect for warm weather.', price: 169.99 },
-    { img: 'IMG_6142.jpg', title: 'Crewneck Sweatshirt', desc: 'Classic crewneck sweatshirt, oversized fit.', price: 169.99 },
-    { img: 'IMG_6143.jpg', title: 'Hooded Full Zip', desc: 'Full zip hoodie, premium cotton blend.', price: 169.99 },
-    { img: 'IMG_6144.jpg', title: 'Jogger Pants', desc: 'Comfortable jogger pants, elastic cuffs.', price: 169.99 },
+    { img: 'Combo/13ab361b-0479-4787-8ab9-c2e1ae57647e.JPG', title: 'Classic Tracksuit', desc: 'Premium logo tracksuit, AAA replica quality.', price: 169.99 },
+    { img: 'Combo/5167e575-7f63-4a03-9799-ae32def6127d.JPG', title: 'Zip-Up Hoodie Set', desc: 'Full zip hoodie and jogger set.', price: 169.99 },
+    { img: 'Combo/58bef246-2a21-42a3-a013-f58cf06a2c0a.JPG', title: 'Signature Knit Set', desc: 'Matching knit top and bottom.', price: 169.99 },
+    { img: 'Combo/81ad7125-d4d3-41e9-8450-b4b6cb5bfab7.JPG', title: 'Velour Tracksuit', desc: 'Luxury velour tracksuit, premium detailing.', price: 169.99 },
+    { img: 'Combo/ab05f976-d022-4a3b-9c0a-83f5c6f33fd2.JPG', title: 'Jersey Shorts Set', desc: 'Sporty jersey set, breathable fabric.', price: 169.99 },
+    { img: 'Combo/acd2af7e-3bfd-491d-bf03-8e734358f5a0.JPG', title: 'Puffer Jacket Set', desc: 'Warm puffer jacket with matching pants.', price: 169.99 },
+    { img: 'Combo/b0effa8c-b8b6-43d9-8c76-3c4e8b4c54b7.JPG', title: 'Tech Fleece Set', desc: 'Modern tech fleece tracksuit.', price: 169.99 },
+    { img: 'Combo/f36f0465-aeca-4592-9a41-9f26ae759b15.JPG', title: 'Summer Knit Set', desc: 'Lightweight knit set, warm weather.', price: 169.99 },
+    { img: 'Combo/IMG_6142.jpg', title: 'Crewneck', desc: 'Classic crewneck sweatshirt.', price: 169.99 },
+    { img: 'Combo/IMG_6143.jpg', title: 'Hooded Full Zip', desc: 'Full zip hoodie, premium cotton.', price: 169.99 },
+    { img: 'Combo/IMG_6144.jpg', title: 'Jogger Pants', desc: 'Comfortable jogger pants.', price: 169.99 },
+    { img: 'Combo/IMG_6865.PNG', title: 'Designer Top', desc: 'Premium designer style top.', price: 169.99 },
+    { img: 'Combo/IMG_6868.PNG', title: 'Casual Jacket', desc: 'Lightweight casual jacket.', price: 169.99 },
+    { img: 'Combo/IMG_6869.PNG', title: 'Sport Jacket', desc: 'Sporty zip-up jacket.', price: 169.99 },
+    { img: 'Combo/IMG_6874.PNG', title: 'Knit Sweater', desc: 'Luxury knit sweater, soft feel.', price: 169.99 },
+    { img: 'Combo/IMG_6875.PNG', title: 'Cardigan', desc: 'Elegant cardigan, premium knit.', price: 169.99 },
+    { img: 'Shirt/IMG_6859.PNG', title: 'Signature Shirt', desc: 'Designer logo shirt, premium fabric.', price: 169.99 },
+    { img: 'Shirt/IMG_6860.PNG', title: 'Classic Tee', desc: 'Essential classic t-shirt.', price: 169.99 },
+    { img: 'Shirt/IMG_6861.PNG', title: 'Polo Shirt', desc: 'Premium polo shirt, embroidered logo.', price: 169.99 },
+    { img: 'Shirt/IMG_6862.PNG', title: 'Button-Up Shirt', desc: 'Casual button-up shirt.', price: 169.99 },
+    { img: 'Shirt/IMG_6864.PNG', title: 'Graphic Tee', desc: 'Designer graphic t-shirt.', price: 169.99 },
   ];
 
   const grid = document.getElementById('productGrid');

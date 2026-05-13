@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luxury Shoes – Top Of The Line Fashions</title>
-  <meta name="description" content="Browse our collection of AAA-quality luxury replica shoes, sneakers, heels, and loafers. Factory direct pricing.">
+  <meta name="description" content="Browse our collection of AAA-quality luxury replica shoes, sneakers, heels. Factory direct pricing.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,10 +100,7 @@
       <button onclick="closeModal()" class="text-cream/40 hover:text-cream text-2xl">&times;</button>
     </div>
     <form id="inquiryForm">
-      <div class="mb-4">
-        <label>Product</label>
-        <input type="text" id="modalProduct" readonly class="opacity-70">
-      </div>
+      <div class="mb-4"><label>Product</label><input type="text" id="modalProduct" readonly class="opacity-70"></div>
       <div class="grid grid-cols-2 gap-4 mb-4">
         <div><label>First Name</label><input type="text" id="firstName" required placeholder="John"></div>
         <div><label>Last Name</label><input type="text" id="lastName" required placeholder="Doe"></div>
@@ -120,10 +117,7 @@
           <option value="PayPal Invoice">PayPal Invoice</option>
         </select>
       </div>
-      <div class="mb-4">
-        <label>Shoe Size</label>
-        <input type="text" id="size" placeholder="e.g. US 8 / EU 39">
-      </div>
+      <div class="mb-4"><label>Shoe Size</label><input type="text" id="size" placeholder="e.g. US 8 / EU 39"></div>
       <div class="mb-6"><label>Notes</label><textarea id="notes" rows="3" placeholder="Color preference, any questions..."></textarea></div>
       <button type="submit" class="btn-primary w-full py-3 rounded-xl text-sm tracking-widest uppercase">Submit Inquiry</button>
     </form>
@@ -136,17 +130,18 @@
 
 <script>
   const shoes = [
-    { img: '2fe32456-5512-4c27-8619-3f67b3ec5325.jpg', title: 'Designer Sneakers', desc: 'Premium luxury sneakers, AAA replica quality.' },
-    { img: '4d97ea25-dfa3-4c94-86c7-720a104c6ae4.jpg', title: 'Leather Loafers', desc: 'Classic leather loafers, elegant and comfortable.' },
-    { img: '6dba115b-ad0b-4a3e-ac0b-2c0f19e2c86f.jpg', title: 'High Heel Pumps', desc: 'Stiletto heels, iconic silhouette.' },
-    { img: '6de5b98b-300f-4e98-8d5c-3f2a0f6f80e5.jpg', title: 'Platform Sneakers', desc: 'Chunky platform sneakers, bold street style.' },
-    { img: '748f02dc-7ca0-4b60-9964-cdf8d606d741.jpg', title: 'Ankle Boots', desc: 'Sleek ankle boots with premium hardware.' },
-    { img: '9f36c6a0-cd4c-4615-87ba-f2792629f4c1.jpg', title: 'Slide Sandals', desc: 'Luxury slide sandals, comfortable everyday style.' },
-    { img: 'ae516c8d-d4c3-437e-8e65-f9a7308bf646.jpg', title: 'Running Sneakers', desc: 'Performance-inspired luxury runners.' },
-    { img: 'bb767650-e84e-403c-a0f8-cbd7f4f285d8.jpg', title: 'Espadrilles', desc: 'Summer espadrilles, woven sole detail.' },
-    { img: 'da80b53f-30bd-4384-b47f-3d5d2ce356a9.jpg', title: 'Combat Boots', desc: 'Edgy combat boots with premium leather.' },
-    { img: 'e8ccd910-baa4-440d-8d22-c386178f11c8.jpg', title: 'Mules', desc: 'Backless mules, elegant slip-on style.' },
-    { img: 'ea95362e-d82c-4f27-bf3b-cf5d7a000fad.jpg', title: 'Wedge Heels', desc: 'Wedge sandals, perfect for daytime elegance.' },
+    { img: 'shoes/105867da-95f3-4993-a8c8-a98aa39667a1.jpg', title: 'Designer Sneakers', desc: 'Premium luxury sneakers, AAA quality.' },
+    { img: 'shoes/2fe32456-5512-4c27-8619-3f67b3ec5325.jpg', title: 'Leather Loafers', desc: 'Classic leather loafers, elegant.' },
+    { img: 'shoes/6dba115b-ad0b-4a3e-ac0b-2c0f19e2c86f.jpg', title: 'High Heels', desc: 'Stiletto heels, iconic silhouette.' },
+    { img: 'shoes/6de5b98b-300f-4e98-8d5c-3f2a0f6f80e5.jpg', title: 'Platform Sneakers', desc: 'Chunky platform sneakers.' },
+    { img: 'shoes/82f19a14-bb4f-49c1-af43-b77f9c9d327d.jpg', title: 'Ankle Boots', desc: 'Sleek ankle boots, premium hardware.' },
+    { img: 'shoes/IMG_5518.PNG', title: 'Luxury Sneakers', desc: 'High-end designer sneakers, premium comfort.' },
+    { img: 'shoes/IMG_5630.PNG', title: 'Athletic Shoes', desc: 'Performance luxury athletic footwear.' },
+    { img: 'shoes/IMG_5661.PNG', title: 'Casual Loafers', desc: 'Comfortable loafers, everyday style.' },
+    { img: 'shoes/IMG_5667.PNG', title: 'Dress Shoes', desc: 'Premium dress shoes, polished look.' },
+    { img: 'shoes/IMG_5741.PNG', title: 'Two-Tone Sneakers', desc: 'Two-tone designer sneakers.' },
+    { img: 'shoes/IMG_5872.PNG', title: 'Running Shoes', desc: 'Premium running shoes, sporty design.' },
+    { img: 'shoes/IMG_6600.PNG', title: 'Summer Sandals', desc: 'Luxury sandals, comfortable style.' },
   ];
 
   const grid = document.getElementById('productGrid');

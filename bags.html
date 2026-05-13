@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Luxury Bags – Top Of The Line Fashions</title>
-  <meta name="description" content="Browse our collection of AAA-quality luxury replica handbags, totes, and clutches. Factory direct pricing.">
+  <meta name="description" content="Browse our collection of AAA-quality luxury replica handbags, purses, and totes. Factory direct pricing.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,16 +81,15 @@
 <section class="pt-24 pb-12 px-4 bg-charcoal/30">
   <div class="max-w-7xl mx-auto text-center">
     <p class="text-blush tracking-[0.3em] uppercase text-sm mb-3">Collection</p>
-    <h1 class="text-4xl sm:text-5xl font-display font-bold text-cream">Luxury Bags</h1>
+    <h1 class="text-4xl sm:text-5xl font-display font-bold text-cream">Bags & Purses</h1>
     <div class="w-16 h-px bg-rosegold mx-auto mt-4"></div>
-    <p class="text-cream/50 mt-4 max-w-xl mx-auto">AAA factory direct replica handbags. Inquire for pricing and availability.</p>
+    <p class="text-cream/50 mt-4 max-w-xl mx-auto">AAA factory direct replica handbags and purses. Inquire for pricing and availability.</p>
   </div>
 </section>
 
 <section class="py-12 px-4">
   <div class="max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid">
-    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid"></div>
   </div>
 </section>
 
@@ -101,28 +100,13 @@
       <button onclick="closeModal()" class="text-cream/40 hover:text-cream text-2xl">&times;</button>
     </div>
     <form id="inquiryForm">
-      <div class="mb-4">
-        <label>Product</label>
-        <input type="text" id="modalProduct" readonly class="opacity-70">
-      </div>
+      <div class="mb-4"><label>Product</label><input type="text" id="modalProduct" readonly class="opacity-70"></div>
       <div class="grid grid-cols-2 gap-4 mb-4">
-        <div>
-          <label>First Name</label>
-          <input type="text" id="firstName" required placeholder="John">
-        </div>
-        <div>
-          <label>Last Name</label>
-          <input type="text" id="lastName" required placeholder="Doe">
-        </div>
+        <div><label>First Name</label><input type="text" id="firstName" required placeholder="John"></div>
+        <div><label>Last Name</label><input type="text" id="lastName" required placeholder="Doe"></div>
       </div>
-      <div class="mb-4">
-        <label>Email</label>
-        <input type="email" id="email" required placeholder="john@example.com">
-      </div>
-      <div class="mb-4">
-        <label>Phone</label>
-        <input type="tel" id="phone" required placeholder="(661) 928-4789">
-      </div>
+      <div class="mb-4"><label>Email</label><input type="email" id="email" required placeholder="john@example.com"></div>
+      <div class="mb-4"><label>Phone</label><input type="tel" id="phone" required placeholder="(661) 928-4789"></div>
       <div class="mb-4">
         <label>Payment Method</label>
         <select id="paymentMethod" required>
@@ -133,10 +117,7 @@
           <option value="PayPal Invoice">PayPal Invoice</option>
         </select>
       </div>
-      <div class="mb-6">
-        <label>Notes</label>
-        <textarea id="notes" rows="3" placeholder="Color preference, size, any questions..."></textarea>
-      </div>
+      <div class="mb-6"><label>Notes</label><textarea id="notes" rows="3" placeholder="Color preference, style, any questions..."></textarea></div>
       <button type="submit" class="btn-primary w-full py-3 rounded-xl text-sm tracking-widest uppercase">Submit Inquiry</button>
     </form>
   </div>
@@ -148,21 +129,27 @@
 
 <script>
   const bags = [
-    { img: '0e14ef7d-d2e1-44d0-adb6-54e3d322315e.jpg', title: 'Designer Tote Bag', desc: 'Spacious luxury tote, premium materials, AAA quality.' },
-    { img: '105867da-95f3-4993-a8c8-a98aa39667a1.jpg', title: 'Quilted Chain Bag', desc: 'Iconic quilted pattern with gold chain strap.' },
-    { img: '2280581a-95bf-4ac7-b151-b246fb7ff878.jpg', title: 'Leather Crossbody', desc: 'Sleek crossbody bag, genuine leather finish.' },
-    { img: '38dda78c-d4db-4417-b6a2-c549b0dafae6.jpg', title: 'Evening Clutch', desc: 'Elegant clutch for evening occasions.' },
-    { img: '4a561aca-e0e4-4a62-aad4-ca3261fa5479.jpg', title: 'Classic Flap Bag', desc: 'Timeless flap bag design, AAA craftsmanship.' },
-    { img: '4cbf3a93-4b98-4fcb-ac24-9d0b2f9416f3.jpg', title: 'Luxury Shoulder Bag', desc: 'Structured shoulder bag with signature detailing.' },
-    { img: '6c5b3046-975c-4294-810d-8a49b40c0913.jpg', title: 'Hobo Bag', desc: 'Slouchy hobo bag, soft leather, everyday luxury.' },
-    { img: '79a0d919-bbb1-46e7-a937-7520bf603069.jpg', title: 'Mini Top Handle Bag', desc: 'Compact top handle bag, perfect for nights out.' },
-    { img: '7afd1805-a497-498b-adc7-ebcda7c8de60.jpg', title: 'Bucket Bag', desc: 'Trending bucket bag silhouette, roomy interior.' },
-    { img: '82f19a14-bb4f-49c1-af43-b77f9c9d327d.jpg', title: 'Camera Bag', desc: 'Compact camera bag, crossbody style.' },
-    { img: '8a51de3a-6292-40aa-8bff-4d11c76cb793.jpg', title: 'Logo Belt Bag', desc: 'Hands-free belt bag with signature logo hardware.' },
-    { img: '8b2422a9-dd81-4ca2-99ff-fff7dc8a100c.jpg', title: 'Leather Satchel', desc: 'Structured satchel with top handles and strap.' },
-    { img: 'c8899612-901e-4c21-be0a-30b2378068cc.jpg', title: 'Tote with Pouch', desc: 'Large tote with detachable pouch included.' },
-    { img: 'd805d81a-e2d8-40ee-b430-64288ca28217.jpg', title: 'Duffel Bag', desc: 'Weekender duffel, premium canvas and leather trim.' },
-    { img: 'e3396281-c541-4c27-9ea6-0a6fcc548fd5.jpg', title: 'Chain Shoulder Bag', desc: 'Elegant chain shoulder bag, gold hardware.' },
+    { img: 'bags/IMG_5586.PNG', title: 'Designer Tote', desc: 'Spacious luxury tote, premium materials.' },
+    { img: 'bags/IMG_6615.PNG', title: 'Mini Crossbody', desc: 'Compact crossbody bag, versatile style.' },
+    { img: 'bags/IMG_6616.PNG', title: 'Shoulder Bag', desc: 'Elegant shoulder bag, gold hardware.' },
+    { img: 'bags/IMG_6617.PNG', title: 'Chain Strap Bag', desc: 'Luxury bag with signature chain strap.' },
+    { img: 'bags/IMG_6618.PNG', title: 'Top Handle Bag', desc: 'Structured top handle bag, timeless.' },
+    { img: 'bags/IMG_6651.PNG', title: 'Leather Satchel', desc: 'Premium leather satchel, roomy interior.' },
+    { img: 'bags/IMG_6817.PNG', title: 'Quilted Bag', desc: 'Iconic quilted pattern, chain detail.' },
+    { img: 'bags/IMG_6836.PNG', title: 'Hobo Bag', desc: 'Slouchy hobo bag, soft feel.' },
+    { img: 'bags/IMG_6838.PNG', title: 'Clutch', desc: 'Sleek evening clutch, compact size.' },
+    { img: 'bags/IMG_6839.PNG', title: 'Camera Bag', desc: 'Trendy camera bag, crossbody style.' },
+    { img: 'bags/IMG_6843.PNG', title: 'Bucket Bag', desc: 'Bucket silhouette, drawstring closure.' },
+    { img: 'bags/IMG_6847.PNG', title: 'Tote Bag', desc: 'Everyday tote, spacious and durable.' },
+    { img: 'purses/16601f22-b3ce-4b57-bc7a-1bdc8e927bd2.JPG', title: 'Designer Purse', desc: 'Luxury purse, premium craftsmanship.' },
+    { img: 'purses/320cfcd2-7f47-43b8-bc5c-b1e821d5cae3.JPG', title: 'Compact Purse', desc: 'Slim purse, perfect for essentials.' },
+    { img: 'purses/4d97ea25-dfa3-4c94-86c7-720a104c6ae4.jpg', title: 'Evening Purse', desc: 'Elegant evening purse, beaded detail.' },
+    { img: 'purses/6190eac8-bf39-445e-b076-3548dbe26fd3.JPG', title: 'Classic Purse', desc: 'Timeless purse design, gold accents.' },
+    { img: 'purses/8bb240d9-8654-4d3c-af39-1e8cf3895cd4.JPG', title: 'Zip Purse', desc: 'Full zip purse, multiple compartments.' },
+    { img: 'purses/ac78eab2-c9fb-47c8-9497-41e0d79c8119.JPG', title: 'Embossed Purse', desc: 'Embossed leather purse, signature look.' },
+    { img: 'purses/bed797f4-ad5c-40ff-9ab7-45b7133b30ea.JPG', title: 'Wristlet Purse', desc: 'Wristlet style, detachable strap.' },
+    { img: 'purses/c6c7c064-6268-47ca-9534-ecdf0e41055c.JPG', title: 'Chain Purse', desc: 'Chain embellished purse, chic style.' },
+    { img: 'purses/eb389cdc-6e6d-41da-a86d-d11f9a52ab95.JPG', title: 'Logo Purse', desc: 'Signature logo purse, premium finish.' },
   ];
 
   const grid = document.getElementById('productGrid');
@@ -170,9 +157,7 @@
     const col = document.createElement('div');
     col.className = 'product-card rounded-2xl';
     col.innerHTML = `
-      <div class="aspect-[4/5] overflow-hidden">
-        <img src="${b.img}" alt="${b.title}" class="w-full h-full object-cover" loading="lazy">
-      </div>
+      <div class="aspect-[4/5] overflow-hidden"><img src="${b.img}" alt="${b.title}" class="w-full h-full object-cover" loading="lazy"></div>
       <div class="p-5">
         <h3 class="font-display text-lg text-cream">${b.title}</h3>
         <p class="text-cream/40 text-sm mt-1">${b.desc}</p>
@@ -194,9 +179,7 @@
     document.getElementById('inquiryModal').classList.remove('active');
     document.body.style.overflow = '';
   }
-  document.getElementById('inquiryModal').addEventListener('click', function(e) {
-    if (e.target === this) closeModal();
-  });
+  document.getElementById('inquiryModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
   document.getElementById('inquiryForm').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = this.querySelector('button[type="submit"]');
@@ -214,10 +197,7 @@
       await fetch('PASTE_YOUR_FORMSPREE_URL_HERE', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
       btn.textContent = 'Sent!';
       setTimeout(() => { closeModal(); btn.textContent = 'Submit Inquiry'; btn.disabled = false; this.reset(); }, 1500);
-    } catch {
-      btn.textContent = 'Error — Try Again';
-      btn.disabled = false;
-    }
+    } catch { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
   });
 
   document.getElementById('mobileMenuBtn').addEventListener('click', function() {
