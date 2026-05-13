@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact – Top Of The Line Fashions</title>
+  <meta name="description" content="Contact Top Of The Line Fashions for inquiries, orders, and concierge service. Bakersfield, CA.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0a0a0a', charcoal: '#1a1a1a', surface: '#232323', 'surface-light': '#2a2a2a',
+            blush: '#d4a0a0', 'blush-light': '#e8b4b4', rosegold: '#c9a96e', 'rosegold-light': '#d4b87a', cream: '#f5f0eb',
+          },
+          fontFamily: { display: ['Playfair Display', 'serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0a0a; color: #f5f0eb; font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+    ::selection { background: #d4a0a0; color: #0a0a0a; }
+    .glass { background: rgba(26,26,26,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .btn-primary { background: linear-gradient(135deg, #d4a0a0, #c9a96e); color: #0a0a0a; font-weight: 600; transition: all 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212,160,160,0.3); }
+    .nav-link { position: relative; cursor: pointer; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #d4a0a0; transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    .form-input { background: #232323; border: 1px solid #333; color: #f5f0eb; border-radius: 0.75rem; padding: 0.75rem 1rem; width: 100%; font-size: 0.875rem; transition: border-color 0.3s ease; }
+    .form-input:focus { outline: none; border-color: #d4a0a0; }
+    .form-input::placeholder { color: #555; }
+  </style>
+</head>
+<body>
+
+<nav class="glass fixed w-full z-50 border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="text-lg sm:text-xl font-display font-semibold tracking-wider text-cream">TOP OF THE LINE <span class="text-blush">FASHIONS</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase">
+        <a href="index.html" class="nav-link text-cream/70 hover:text-cream transition">Home</a>
+        <a href="bags.html" class="nav-link text-cream/70 hover:text-cream transition">Bags</a>
+        <a href="shoes.html" class="nav-link text-cream/70 hover:text-cream transition">Shoes</a>
+        <a href="clothes.html" class="nav-link text-cream/70 hover:text-cream transition">Clothes</a>
+        <a href="accessories.html" class="nav-link text-cream/70 hover:text-cream transition">Accessories</a>
+        <a href="contact.html" class="nav-link text-blush">Contact</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden text-cream">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-charcoal/95 backdrop-blur-lg border-t border-white/5">
+    <div class="px-4 py-4 space-y-3 text-sm tracking-widest uppercase">
+      <a href="index.html" class="block text-cream/70 hover:text-cream">Home</a>
+      <a href="bags.html" class="block text-cream/70 hover:text-cream">Bags</a>
+      <a href="shoes.html" class="block text-cream/70 hover:text-cream">Shoes</a>
+      <a href="clothes.html" class="block text-cream/70 hover:text-cream">Clothes</a>
+      <a href="accessories.html" class="block text-cream/70 hover:text-cream">Accessories</a>
+      <a href="contact.html" class="block text-blush">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="pt-24 pb-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-blush tracking-[0.3em] uppercase text-sm mb-3">Get in Touch</p>
+      <h1 class="text-4xl sm:text-5xl font-display font-bold text-cream">Contact Us</h1>
+      <div class="w-16 h-px bg-rosegold mx-auto mt-4"></div>
+      <p class="text-cream/50 mt-4 max-w-xl mx-auto">Reach out for inquiries, orders, or anything else. We typically respond within 24 hours.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <div>
+        <form id="contactForm">
+          <div class="grid grid-cols-2 gap-4 mb-4">
+            <div>
+              <label class="text-xs tracking-widest uppercase text-blush mb-2 block">First Name</label>
+              <input type="text" id="firstName" required class="form-input" placeholder="John">
+            </div>
+            <div>
+              <label class="text-xs tracking-widest uppercase text-blush mb-2 block">Last Name</label>
+              <input type="text" id="lastName" required class="form-input" placeholder="Doe">
+            </div>
+          </div>
+          <div class="mb-4">
+            <label class="text-xs tracking-widest uppercase text-blush mb-2 block">Email</label>
+            <input type="email" id="email" required class="form-input" placeholder="john@example.com">
+          </div>
+          <div class="mb-4">
+            <label class="text-xs tracking-widest uppercase text-blush mb-2 block">Subject</label>
+            <input type="text" id="subject" required class="form-input" placeholder="Product inquiry">
+          </div>
+          <div class="mb-6">
+            <label class="text-xs tracking-widest uppercase text-blush mb-2 block">Message</label>
+            <textarea id="message" required class="form-input" rows="5" placeholder="Tell us what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full py-3 rounded-xl text-sm tracking-widest uppercase">Send Message</button>
+        </form>
+      </div>
+
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-sm tracking-widest uppercase text-blush mb-4">Contact Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-blush/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-blush" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </div>
+              <div>
+                <p class="text-cream/50 text-sm">Email</p>
+                <p class="text-cream">jfclothing111@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-rosegold/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-rosegold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              </div>
+              <div>
+                <p class="text-cream/50 text-sm">Phone</p>
+                <p class="text-cream">(661) 928-4789</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full bg-blush/10 flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 text-blush" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-cream/50 text-sm">Location</p>
+                <p class="text-cream">Bakersfield, CA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/5 pt-8">
+          <h3 class="text-sm tracking-widest uppercase text-blush mb-4">Payment Methods</h3>
+          <p class="text-cream/50 text-sm leading-relaxed">We accept Zelle, CashApp, Apple Pay, and PayPal Invoice. All sales are final. Contact us to inquire about any product and we'll guide you through the process.</p>
+        </div>
+
+        <div class="border-t border-white/5 pt-8">
+          <h3 class="text-sm tracking-widest uppercase text-blush mb-4">1St CLAZ</h3>
+          <p class="text-cream/50 text-sm leading-relaxed">Top Of The Line Fashions — AAA factory direct luxury replicas. Based in Bakersfield, California. Serving customers nationwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-charcoal border-t border-white/5 py-12 px-4">
+  <div class="max-w-7xl mx-auto text-center text-cream/40 text-xs tracking-wider">&copy; 2026 Top Of The Line Fashions. All rights reserved. 1st CLAZ</div>
+</footer>
+
+<script>
+  document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    const data = new FormData();
+    data.append('First Name', document.getElementById('firstName').value);
+    data.append('Last Name', document.getElementById('lastName').value);
+    data.append('Email', document.getElementById('email').value);
+    data.append('Subject', document.getElementById('subject').value);
+    data.append('Message', document.getElementById('message').value);
+    try {
+      await fetch('PASTE_YOUR_FORMSPREE_URL_HERE', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      btn.textContent = 'Message Sent!';
+      this.reset();
+      setTimeout(() => { btn.textContent = 'Send Message'; btn.disabled = false; }, 2000);
+    } catch {
+      btn.textContent = 'Error — Try Again';
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>

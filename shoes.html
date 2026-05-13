@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Shoes – Top Of The Line Fashions</title>
+  <meta name="description" content="Browse our collection of AAA-quality luxury replica shoes, sneakers, heels, and loafers. Factory direct pricing.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0a0a0a', charcoal: '#1a1a1a', surface: '#232323', 'surface-light': '#2a2a2a',
+            blush: '#d4a0a0', 'blush-light': '#e8b4b4', rosegold: '#c9a96e', 'rosegold-light': '#d4b87a', cream: '#f5f0eb',
+          },
+          fontFamily: { display: ['Playfair Display', 'serif'], body: ['Inter', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0a0a; color: #f5f0eb; font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+    ::selection { background: #d4a0a0; color: #0a0a0a; }
+    .glass { background: rgba(26,26,26,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .btn-primary { background: linear-gradient(135deg, #d4a0a0, #c9a96e); color: #0a0a0a; font-weight: 600; transition: all 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(212,160,160,0.3); }
+    .btn-outline { border: 1px solid #d4a0a0; color: #d4a0a0; transition: all 0.3s ease; }
+    .btn-outline:hover { background: #d4a0a0; color: #0a0a0a; }
+    .product-card { background: #1a1a1a; border: 1px solid #2a2a2a; transition: all 0.4s ease; overflow: hidden; }
+    .product-card:hover { border-color: #d4a0a0; transform: translateY(-4px); box-shadow: 0 12px 40px rgba(212,160,160,0.1); }
+    .product-card img { transition: transform 0.6s ease; }
+    .product-card:hover img { transform: scale(1.05); }
+    .nav-link { position: relative; cursor: pointer; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 1px; background: #d4a0a0; transition: width 0.3s ease; }
+    .nav-link:hover::after { width: 100%; }
+    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(8px); z-index: 100; display: none; justify-content: center; align-items: center; padding: 1rem; }
+    .modal-overlay.active { display: flex; }
+    .modal-content { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 1.5rem; max-width: 520px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 2rem; }
+    .modal-content input, .modal-content select, .modal-content textarea { background: #232323; border: 1px solid #333; color: #f5f0eb; border-radius: 0.75rem; padding: 0.75rem 1rem; width: 100%; font-size: 0.875rem; }
+    .modal-content input:focus, .modal-content select:focus, .modal-content textarea:focus { outline: none; border-color: #d4a0a0; }
+    .modal-content label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #d4a0a0; margin-bottom: 0.5rem; display: block; }
+  </style>
+</head>
+<body>
+
+<nav class="glass fixed w-full z-50 border-b border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="text-lg sm:text-xl font-display font-semibold tracking-wider text-cream">TOP OF THE LINE <span class="text-blush">FASHIONS</span></a>
+      <div class="hidden md:flex items-center gap-8 text-sm tracking-widest uppercase">
+        <a href="index.html" class="nav-link text-cream/70 hover:text-cream transition">Home</a>
+        <a href="bags.html" class="nav-link text-cream/70 hover:text-cream transition">Bags</a>
+        <a href="shoes.html" class="nav-link text-blush">Shoes</a>
+        <a href="clothes.html" class="nav-link text-cream/70 hover:text-cream transition">Clothes</a>
+        <a href="accessories.html" class="nav-link text-cream/70 hover:text-cream transition">Accessories</a>
+        <a href="contact.html" class="nav-link text-cream/70 hover:text-cream transition">Contact</a>
+      </div>
+      <button id="mobileMenuBtn" class="md:hidden text-cream">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-charcoal/95 backdrop-blur-lg border-t border-white/5">
+    <div class="px-4 py-4 space-y-3 text-sm tracking-widest uppercase">
+      <a href="index.html" class="block text-cream/70 hover:text-cream">Home</a>
+      <a href="bags.html" class="block text-cream/70 hover:text-cream">Bags</a>
+      <a href="shoes.html" class="block text-blush">Shoes</a>
+      <a href="clothes.html" class="block text-cream/70 hover:text-cream">Clothes</a>
+      <a href="accessories.html" class="block text-cream/70 hover:text-cream">Accessories</a>
+      <a href="contact.html" class="block text-cream/70 hover:text-cream">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<section class="pt-24 pb-12 px-4 bg-charcoal/30">
+  <div class="max-w-7xl mx-auto text-center">
+    <p class="text-blush tracking-[0.3em] uppercase text-sm mb-3">Collection</p>
+    <h1 class="text-4xl sm:text-5xl font-display font-bold text-cream">Luxury Shoes</h1>
+    <div class="w-16 h-px bg-rosegold mx-auto mt-4"></div>
+    <p class="text-cream/50 mt-4 max-w-xl mx-auto">AAA factory direct replica footwear. Inquire for pricing and availability.</p>
+  </div>
+</section>
+
+<section class="py-12 px-4">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid"></div>
+  </div>
+</section>
+
+<div class="modal-overlay" id="inquiryModal">
+  <div class="modal-content">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-xl font-display text-cream">Concierge Inquiry</h3>
+      <button onclick="closeModal()" class="text-cream/40 hover:text-cream text-2xl">&times;</button>
+    </div>
+    <form id="inquiryForm">
+      <div class="mb-4">
+        <label>Product</label>
+        <input type="text" id="modalProduct" readonly class="opacity-70">
+      </div>
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <div><label>First Name</label><input type="text" id="firstName" required placeholder="John"></div>
+        <div><label>Last Name</label><input type="text" id="lastName" required placeholder="Doe"></div>
+      </div>
+      <div class="mb-4"><label>Email</label><input type="email" id="email" required placeholder="john@example.com"></div>
+      <div class="mb-4"><label>Phone</label><input type="tel" id="phone" required placeholder="(661) 928-4789"></div>
+      <div class="mb-4">
+        <label>Payment Method</label>
+        <select id="paymentMethod" required>
+          <option value="">Select payment method</option>
+          <option value="Zelle">Zelle</option>
+          <option value="CashApp">CashApp</option>
+          <option value="Apple Pay">Apple Pay</option>
+          <option value="PayPal Invoice">PayPal Invoice</option>
+        </select>
+      </div>
+      <div class="mb-4">
+        <label>Shoe Size</label>
+        <input type="text" id="size" placeholder="e.g. US 8 / EU 39">
+      </div>
+      <div class="mb-6"><label>Notes</label><textarea id="notes" rows="3" placeholder="Color preference, any questions..."></textarea></div>
+      <button type="submit" class="btn-primary w-full py-3 rounded-xl text-sm tracking-widest uppercase">Submit Inquiry</button>
+    </form>
+  </div>
+</div>
+
+<footer class="bg-charcoal border-t border-white/5 py-12 px-4">
+  <div class="max-w-7xl mx-auto text-center text-cream/40 text-xs tracking-wider">&copy; 2026 Top Of The Line Fashions. All rights reserved. 1st CLAZ</div>
+</footer>
+
+<script>
+  const shoes = [
+    { img: '2fe32456-5512-4c27-8619-3f67b3ec5325.jpg', title: 'Designer Sneakers', desc: 'Premium luxury sneakers, AAA replica quality.' },
+    { img: '4d97ea25-dfa3-4c94-86c7-720a104c6ae4.jpg', title: 'Leather Loafers', desc: 'Classic leather loafers, elegant and comfortable.' },
+    { img: '6dba115b-ad0b-4a3e-ac0b-2c0f19e2c86f.jpg', title: 'High Heel Pumps', desc: 'Stiletto heels, iconic silhouette.' },
+    { img: '6de5b98b-300f-4e98-8d5c-3f2a0f6f80e5.jpg', title: 'Platform Sneakers', desc: 'Chunky platform sneakers, bold street style.' },
+    { img: '748f02dc-7ca0-4b60-9964-cdf8d606d741.jpg', title: 'Ankle Boots', desc: 'Sleek ankle boots with premium hardware.' },
+    { img: '9f36c6a0-cd4c-4615-87ba-f2792629f4c1.jpg', title: 'Slide Sandals', desc: 'Luxury slide sandals, comfortable everyday style.' },
+    { img: 'ae516c8d-d4c3-437e-8e65-f9a7308bf646.jpg', title: 'Running Sneakers', desc: 'Performance-inspired luxury runners.' },
+    { img: 'bb767650-e84e-403c-a0f8-cbd7f4f285d8.jpg', title: 'Espadrilles', desc: 'Summer espadrilles, woven sole detail.' },
+    { img: 'da80b53f-30bd-4384-b47f-3d5d2ce356a9.jpg', title: 'Combat Boots', desc: 'Edgy combat boots with premium leather.' },
+    { img: 'e8ccd910-baa4-440d-8d22-c386178f11c8.jpg', title: 'Mules', desc: 'Backless mules, elegant slip-on style.' },
+    { img: 'ea95362e-d82c-4f27-bf3b-cf5d7a000fad.jpg', title: 'Wedge Heels', desc: 'Wedge sandals, perfect for daytime elegance.' },
+  ];
+
+  const grid = document.getElementById('productGrid');
+  shoes.forEach(s => {
+    const col = document.createElement('div');
+    col.className = 'product-card rounded-2xl';
+    col.innerHTML = `
+      <div class="aspect-[4/5] overflow-hidden"><img src="${s.img}" alt="${s.title}" class="w-full h-full object-cover" loading="lazy"></div>
+      <div class="p-5">
+        <h3 class="font-display text-lg text-cream">${s.title}</h3>
+        <p class="text-cream/40 text-sm mt-1">${s.desc}</p>
+        <div class="flex items-center justify-between mt-4">
+          <span class="text-blush text-sm">Inquire for Price</span>
+          <button onclick="openInquiry('${s.title.replace(/'/g, "\\'")}')" class="btn-outline text-xs px-4 py-2 rounded-full tracking-widest uppercase">Inquire</button>
+        </div>
+      </div>
+    `;
+    grid.appendChild(col);
+  });
+
+  function openInquiry(product) {
+    document.getElementById('modalProduct').value = product + ' — Shoes Collection';
+    document.getElementById('inquiryModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    document.getElementById('inquiryModal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('inquiryModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+  document.getElementById('inquiryForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    const data = new FormData();
+    data.append('Product', document.getElementById('modalProduct').value);
+    data.append('First Name', document.getElementById('firstName').value);
+    data.append('Last Name', document.getElementById('lastName').value);
+    data.append('Email', document.getElementById('email').value);
+    data.append('Phone', document.getElementById('phone').value);
+    data.append('Payment Method', document.getElementById('paymentMethod').value);
+    data.append('Size', document.getElementById('size').value);
+    data.append('Notes', document.getElementById('notes').value);
+    try {
+      await fetch('PASTE_YOUR_FORMSPREE_URL_HERE', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+      btn.textContent = 'Sent!';
+      setTimeout(() => { closeModal(); btn.textContent = 'Submit Inquiry'; btn.disabled = false; this.reset(); }, 1500);
+    } catch { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+  });
+
+  document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.toggle('hidden');
+  });
+</script>
+</body>
+</html>
